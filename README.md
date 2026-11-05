@@ -28,6 +28,7 @@ The template's `packageManager` field specifies the pnpm version. If you use Cor
 
 - [Draft issue](workshop/issue.md): create this as a GitHub issue before the session; leave the details for the audience to clarify.
 - [Facilitator guide](workshop/facilitator.md): timing, audience prompts, GitHub preparation, review and fallback.
+- [Question bank](workshop/questions.md): quiz questions, answers and discussion prompts for the session.
 
 The checklist is in `app/components/TravelChecklist.vue`; its existing behavior test is in `tests/travel-checklist.test.ts`. The GitHub Actions workflow runs lint, type checking and tests when the repository is hosted on GitHub.
 
