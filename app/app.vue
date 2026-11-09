@@ -5,20 +5,25 @@ useHead({
 
 useSeoMeta({
   title: 'Travel checklist',
-  description: 'A fictional travel checklist for an AI workshop.'
+  description: 'A fictional travel checklist for an AI workshop.',
+  themeColor: '#AF1E65'
 })
 </script>
 
 <template>
   <UApp>
-    <header class="border-b border-default">
-      <UContainer class="py-4">
+    <header class="bg-white">
+      <UContainer class="flex items-center justify-between py-4">
         <NuxtLink
           to="/"
-          class="font-semibold"
+          class="
+            rounded-sm text-lg font-bold text-primary
+            focus-visible:focus-ring-ew
+          "
         >
           Travel ready
         </NuxtLink>
+        <span class="text-sm text-muted">Workshop demo</span>
       </UContainer>
     </header>
     <main>

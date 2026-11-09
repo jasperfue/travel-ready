@@ -1,67 +1,70 @@
-# Workshop question bank
+# Workshop participation prompts
 
-These are facilitator notes for the 55-minute session in [facilitator.md](facilitator.md), not a participant handout. Show only each question and its options before voting. Run the four numbered questions at the times in the guide; allow 20–30 seconds to answer and use the rest of the minute for the reveal and explanation. If the quiz tool is unavailable, ask participants to post A–D in chat. Questions assess concepts, not speed or prior experience.
+Facilitator prompts for the 55-minute session in [facilitator.md](facilitator.md). These are conversation starters and decisions, not a scored quiz. Use Teams polls or chat, keep participation optional, and adapt to the actual discussion rather than working through every prompt.
 
-## Q1 — What is a skill? (3–5 minutes)
+## Opening (0–5 minutes)
 
-**Question:** What does an AI skill provide in this workshop?
+**Poll: “Where are you today?”** (single answer, anonymous, results shared)
 
-A. Reusable instructions for an assistant to follow when the skill is available  
-B. A guarantee that the assistant's answer is correct  
-C. A separate human reviewer who approves every change  
-D. Permanent memory shared automatically by all AI tools
+1. Autocomplete: suggestions while I type.
+2. Chat: I ask, then copy and paste.
+3. Agent, me in the loop: it edits and runs; I approve.
+4. Agent from specs and tests: I define done; it delivers.
+5. Team workflows: shared skills and conventions.
 
-**Answer: A.** A skill packages guidance for a task. It does not guarantee quality or automatically share context between tools. Here `grill-me` invokes `grilling` to help clarify decisions; availability and invocation depend on the environment.
+Optional second poll: **“What's your role?”** Engineering/development, product, design, or another role (multiple answers).
 
-**Debrief:** “We still decide whether the questions and answers make sense.”
+**Chat: “What frustrates you most about coding agents?”** Pick one or two answers and come back to them later.
 
-## Q2 — Handing off context (9–10 minutes)
+Nobody is judged for their rung; every rung gets a next step at the end.
 
-**Question:** The room agrees how the new checklist item should behave. How does the separate GitHub coding agent reliably receive those decisions?
+## What needs clarification? (5–7 minutes)
 
-A. It automatically sees the facilitator's local conversation  
-B. Record the approved behavior and relevant context in the GitHub issue before assigning it  
-C. Assume it will infer every decision from the app  
-D. Wait until after the PR is merged
+Show the starter app and the brief request: “Let travelers add a personal checklist item.”
 
-**Answer: B.** The local assistant and coding agent work in separate environments. Put the agreed scope, acceptance criteria and verification expectations in the issue the agent receives.
+**Ask:** “What important decision would you want answered before the agent starts?”
 
-**Debrief:** “A clear handoff is a human responsibility; an AI conversation is not automatically shared.”
+Collect a few suggestions in chat. Then invoke `grill-me` and compare: what both found, what only the agent asked, and what only people raised.
 
-## Q3 — Understanding TDD (19–20 minutes)
+## Decide the first scope (7–15 minutes)
 
-**Question:** Which sequence best describes a small test-driven development cycle?
+Choose two or three consequential questions. Possible prompts:
 
-A. Write all production code, then assume it works  
-B. Write a behavior test, see it fail, then make it pass  
-C. Run the existing tests once and merge  
-D. Ask the agent to claim that it tested the change
+- “What should we ship first: adding an item during this visit, or keeping the checklist between visits?”
+- “What should happen if someone submits an empty or whitespace-only item?”
+- “Should a new item be checked or unchecked, and how should it affect progress?”
+- “Where should the tests sit—what's the seam?”
 
-**Answer: B.** Red → green starts with a failing test for a behavior, then adds enough implementation to make it pass. Refactoring can follow while keeping tests green.
+Record the actual decisions. Don't present a predetermined outcome as a vote.
 
-**Debrief:** “A passing final test alone does not establish that the agent followed this order; look for actual session evidence.”
+## Approve the record (15–18 minutes)
 
-## Q4 — Reviewing the result (39–40 minutes)
+**Ask:** “Does this issue update say what we agreed? Is anything missing or wrong?”
 
-**Question:** The agent's PR has passing automated checks. What is the best next step?
+## While the agent implements (18–30 minutes)
 
-A. Merge immediately because passing checks prove the feature is correct  
-B. Review the agreed behavior, usability, changes and missing evidence before deciding  
-C. Reject it solely because AI produced it  
-D. Ignore the PR and rely on the issue title
+When `tdd` proposes seams, **ask:** “Is this where we agreed to test?”
 
-**Answer: B.** Checks are useful evidence, not proof that all requirements or usability needs are met. Inspect the result and ask for changes or more evidence when needed.
+For people already using agents, **ask:** “Look at the test it just wrote. Could it ever fail? Does it test behavior or internals?”
 
-**Debrief:** “Humans own the decision; the appropriate verdict depends on what the PR actually shows.”
+**Prediction:** “What will the agent do with what we didn't decide?” Offer cases such as adding “Clothes” a second time, a 200-character item, spaces around the name, or deleting one's own item. Skip anything already decided. Capture two predictions for the review.
 
-## Unscored discussion prompts
+**Follow up:** “What else could go wrong, even if the tests pass?”
 
-These are decisions or reflections, not questions with a predetermined correct answer.
+## Make the review decision (38–42 minutes)
 
-- **Scope (5–9 minutes):** “What should we ship first: adding an item during this visit, or keeping the checklist between visits?” Discuss value and the storage/privacy implications; record the room's decision rather than presenting a fixed outcome as a vote.
-- **Prediction (20–30 minutes):** “If all four existing items are packed and I add one unchecked item, what should progress show?” If the agreed behavior is to add an unchecked item and include it in progress, the expected result is 4 of 5 packed. Capture two predictions and check them in the review.
-- **Exit prompt (50–55 minutes):** “For a small task you might delegate, what is one decision you would clarify first and one piece of evidence you would review?” Invite chat responses or private reflection.
+**“Would you approve, request changes, or ask for more evidence? Why?”**
 
-## Adding a question
+If the PR is good: **“What evidence convinced us—and what haven't we checked?”** and **“The agent chose how to handle duplicates and spaces. Do we accept that or open a follow-up?”**
 
-For future candidates, record the intended segment and learning objective, the question, plausible options, the answer with a short rationale, and a debrief. Mark open-ended trade-offs as unscored and avoid treating environment-dependent behavior as universal.
+Invite product, design, and engineering perspectives. A passing check is evidence, not proof. If reviewing a rehearsal PR, label it clearly and review it against its own issue.
+
+## From one session to a team (42–48 minutes)
+
+**Chat: “Which of your team's practices should become a skill?”**
+
+After your story: **“What has worked—or failed—for you?”**
+
+## Closing (50–55 minutes)
+
+Leave slide 17 (questions, links and contact) up during Q&A. If time allows, **ask:** “What is one decision you'd clarify first on your next agent task?” Invite a chat response or private reflection; there is no single correct answer.

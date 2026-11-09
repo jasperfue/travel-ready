@@ -11,6 +11,11 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
+  ui: {
+    // The workshop demo uses the light Eurowings Digital palette only.
+    colorMode: false
+  },
+
   routeRules: {
     '/': { prerender: true }
   },
