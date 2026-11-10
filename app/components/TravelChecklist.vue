@@ -7,8 +7,27 @@ const items = ref([
   { label: 'Medication', packed: false },
   { label: 'Clothes', packed: false }
 ])
+const newItemLabel = ref('')
+const addItemError = ref('')
 
 const packedCount = computed(() => items.value.filter(item => item.packed).length)
+
+function addItem() {
+  const label = newItemLabel.value.trim()
+  if (!label) {
+    addItemError.value = 'Enter an item.'
+    return
+  }
+
+  if (items.value.some(item => item.label.toLowerCase() === label.toLowerCase())) {
+    addItemError.value = 'This item is already on your checklist.'
+    return
+  }
+
+  items.value.push({ label, packed: false })
+  newItemLabel.value = ''
+  addItemError.value = ''
+}
 </script>
 
 <template>
@@ -59,9 +78,44 @@ const packedCount = computed(() => items.value.filter(item => item.packed).lengt
               focus-visible:focus-ring-ew
             "
           >
-          <span>{{ item.label }}</span>
+          <span class="min-w-0 break-words">{{ item.label }}</span>
         </label>
       </li>
     </ul>
+    <form
+      class="mt-6 border-t border-mist pt-6"
+      @submit.prevent="addItem"
+    >
+      <label
+        for="personal-item"
+        class="block text-sm font-semibold"
+      >
+        Add a personal item
+      </label>
+      <div class="mt-2 flex gap-2">
+        <input
+          id="personal-item"
+          v-model="newItemLabel"
+          type="text"
+          :aria-invalid="Boolean(addItemError)"
+          :aria-describedby="addItemError ? 'personal-item-error' : undefined"
+          class="min-w-0 flex-1 rounded-md border border-mist px-3 py-2 focus-visible:focus-ring-ew"
+        >
+        <button
+          type="submit"
+          class="rounded-md bg-primary px-4 py-2 font-semibold text-white hover:bg-primary/90 focus-visible:focus-ring-ew"
+        >
+          Add
+        </button>
+      </div>
+      <p
+        v-if="addItemError"
+        id="personal-item-error"
+        role="alert"
+        class="mt-2 text-sm text-red-700"
+      >
+        {{ addItemError }}
+      </p>
+    </form>
   </section>
 </template>
