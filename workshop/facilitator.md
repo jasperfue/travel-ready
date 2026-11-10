@@ -66,7 +66,8 @@ Times include discussion. The demo is the spine; the deeper layers are commentar
 | 42–45 | Slide 14 | Skills as team knowledge; open one skill file briefly. | Name a practice that should become a skill. |
 | 45–48 | Slide 15 | Your lesson from the field. | Share what has worked or failed for them. |
 | 48–50 | Slide 16 | A next step for every rung, then harness engineering as the next level; recap. | Pick their next step. |
-| 50–55 | Slide 17 | Questions, with links and contact on screen. | Ask questions. |
+| 50–51 | Slide 17 | Where this is going: further reading in one sentence per row. | — |
+| 51–55 | Slide 18 | Questions, with links and contact on screen. | Ask questions. |
 
 If implementation is not finished at about minute 30, show slide 12 and switch to the rehearsal PR or recording. Label it clearly as a rehearsal, not the live result. If it reflects different decisions from the room's, point out the differences and review it against its own issue. Let the live session continue and return to it only if it finishes in time.
 
@@ -205,11 +206,12 @@ Today's session touched individual pieces of this; a harness makes them a delibe
 
 Recap the room's actual decisions, predictions and verdict in one or two sentences: the agent wrote the code; people decided, recorded, checked and judged.
 
-Leave slide 17 up during Q&A and post the same links in chat. The repository's README is written for participants: a summary of the session, the workflow, the prompts, a next step per rung, and the links and contact below. Once the repository is shared, its link is the one thing people need.
+Then show the outlook (slide 17) for a minute or two. Slide 16 says what to do next; this slide says where to read on: where the SDLC is heading (Google's paper on the new SDLC, Anthropic's AI-native SDLC playbook), spec-driven development (OpenSpec, GitHub Spec Kit: specs in the repo, a bigger version of our issue), and workflows and review (QRSPI, Marco Klein's impact hierarchy). Every title links out, and the list is in the README.
+
+Leave slide 18 up during Q&A and post the same links in chat. The repository's README is written for participants: a summary of the session, the workflow, the prompts, a next step per rung, and the links and contact below. Once the repository is shared, its link is the one thing people need.
 
 - Skills used today: <https://github.com/mattpocock/skills/tree/main>
 - Demo repository: <https://github.com/netlight-example/travel-ready> (**placeholder**: replace once the repository is published and sharing is approved, in the deck and here)
-- Your organization's current Copilot CLI access and setup instructions
 - Contact: jasper.fuelle@netlight.com
 
 If time allows, close with: **“What is one decision you'd clarify first on your next agent task?”** The handout (hidden slides at the end of the deck) contains the three prompts, the issue template, the review checklist, a glossary and getting-started steps. The reusable issue template:

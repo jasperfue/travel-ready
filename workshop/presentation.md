@@ -2,7 +2,7 @@
 
 Slide blueprint for the 55-minute AI Focus Session. The built deck is [From Idea to Pull Request.pptx](From%20Idea%20to%20Pull%20Request.pptx), based on the Eurowings Digital slide master. The slides frame a live demonstration in one local GitHub Copilot CLI session; they do not replace it. For much of the session the shared screen shows the app, Copilot CLI, the GitHub issue or the PR.
 
-The deck has 18 presentation slides followed by 6 handout slides. The handout slides are hidden in the slide show; export to PDF with “Include hidden slides” to share them. Every slide has presenter notes with timing and the next screen to switch to.
+The deck has 19 presentation slides followed by 6 handout slides. The handout slides are hidden in the slide show; export to PDF with “Include hidden slides” to share them. Every slide has presenter notes with timing and the next screen to switch to.
 
 ## Narrative
 
@@ -38,8 +38,9 @@ The deck has 18 presentation slides followed by 6 handout slides. The handout sl
 | 14 | From one session to a team | 42–45 | Agent users | A skill file in the repo |
 | 15 | Lessons from the field | 45–48 | Both | — |
 | 16 | Your next step | 48–50 | Both | — |
-| 17 | Questions & resources | 50–55 | — | Stays up during Q&A |
-| 18 | Thank you | End | — | — |
+| 17 | Where this is going | 50–51 | Both | — |
+| 18 | Questions & resources | 51–55 | — | Stays up during Q&A |
+| 19 | Thank you | End | — | — |
 
 ### 1. Welcome
 
@@ -116,12 +117,17 @@ The deck has 18 presentation slides followed by 6 handout slides. The handout sl
 
 **On screen:** One next step per rung (rungs 1 and 2 share one). Below, in magenta: **Next level: harness engineering**—design systems around the agent that constrain (architectural boundaries, dependency rules), inform (context engineering, documentation), verify (tests, linting, CI validation) and correct (feedback loops, self-repair).
 
-### 17. Questions & resources
+### 17. Where this is going
 
-**On screen:** “Questions welcome” card; clickable links to the skills (github.com/mattpocock/skills), the demo repository (**placeholder** github.com/netlight-example/travel-ready), Copilot CLI access (link in chat) and contact (jasper.fuelle@netlight.com).
+**On screen:** “Further reading—every title links out.” Three rows of two linked resources each. Where the SDLC is heading: *The new SDLC with vibe coding* (Osmani, Saboo, Kartakis, Google, May 2026) and *The AI-native SDLC playbook* (Anthropic). Spec-driven development: *OpenSpec* (Fission AI) and *Spec Kit* (GitHub). Workflows and review: *QRSPI workflow* and *Impact hierarchy* (both Marco Klein).
+**Presenter note:** One or two minutes. The outlook, not another to-do list: slide 16 says what to do next; this slide says where to read on.
+
+### 18. Questions & resources
+
+**On screen:** “Questions welcome” card; clickable links to the skills (github.com/mattpocock/skills), the demo repository (**placeholder** github.com/netlight-example/travel-ready) and contact (jasper.fuelle@netlight.com).
 **Presenter note:** Leave up during Q&A; post the same links in chat.
 
-### 18. Thank you
+### 19. Thank you
 
 Outro layout.
 
@@ -134,4 +140,4 @@ Outro layout.
 3. **A reusable issue template:** Problem, Expected behavior, Out of scope, Verification.
 4. **Review checklist:** Product, Design, Engineering (including test traps) and Everyone, plus the four closing questions.
 5. **Mini glossary:** coding agent, Copilot CLI, pull request, skill, TDD, test seam, harness engineering.
-6. **Getting started:** pick, clarify, record, implement, review; plus resources (skills link, demo repository placeholder, Copilot CLI access placeholder, contact email). Fill in the placeholders before sharing.
+6. **Getting started:** pick, clarify, record, implement, review; plus resources (skills link, demo repository placeholder, contact email). Replace the repository placeholder before sharing.

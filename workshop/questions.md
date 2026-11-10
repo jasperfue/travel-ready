@@ -67,4 +67,4 @@ After your story: **“What has worked—or failed—for you?”**
 
 ## Closing (50–55 minutes)
 
-Leave slide 17 (questions, links and contact) up during Q&A. If time allows, **ask:** “What is one decision you'd clarify first on your next agent task?” Invite a chat response or private reflection; there is no single correct answer.
+Leave slide 18 (questions, links and contact) up during Q&A. If time allows, **ask:** “What is one decision you'd clarify first on your next agent task?” Invite a chat response or private reflection; there is no single correct answer.

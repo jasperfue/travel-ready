@@ -41,6 +41,12 @@ Pick a next step for where you are today:
 
 Skill availability and invocation depend on your tool and its configuration. If a skill isn't available, the prompts above still work as plain-language instructions.
 
+## Going further
+
+- **Where the SDLC is heading:** [The new SDLC with vibe coding](https://drive.google.com/file/d/1IR7CddF_2FyQo_PdfBNTaEA50EGiVt2r) (Addy Osmani, Shubham Saboo, Sokratis Kartakis, Google, May 2026) and [The AI-native SDLC playbook](https://claude.com/blog/the-ai-native-sdlc-playbook) (Anthropic).
+- **Spec-driven development:** [OpenSpec](https://github.com/Fission-AI/OpenSpec) (Fission AI) keeps proposals, specs and task lists in the repo; [Spec Kit](https://github.com/github/spec-kit) (GitHub) is a spec-driven toolkit for GitHub Copilot and other agents.
+- **Workflows and review:** [QRSPI](https://gist.github.com/marcoklein/4cc4167158b7fa0a153e4ec1a57878cf), an agentic engineering workflow in phases with a human review between each, and [Impact hierarchy: review design first](https://marcoklein.dev/posts/impact-hierarchy-review-design-first/) (both Marco Klein).
+
 ## Resources and contact
 
 - **Skills used in the demo:** [github.com/mattpocock/skills](https://github.com/mattpocock/skills/tree/main). The copies used here are in [`.agents/skills`](.agents/skills).
